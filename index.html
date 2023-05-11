@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container" style="margin-bottom: 250px">
+      <h3 class="text-center">Bài tập quản lí tuyển sinh</h3>
+      <div class="card">
+        <p class="card-header text-center bg-dark text-white">
+          Vui lòng nhập khu vực và đối tượng dựa vào bảng này:
+        </p>
+        <div
+          class="card-body text-center bg-danger text-white border border-dark"
+        >
+          <div class="row">
+            <div class="col border border-primary mx-2">
+              <p>Khu Vực</p>
+              <div class="row">
+                <div class="col">
+                  <p>Khu vực A: được cộng 2 điểm</p>
+                </div>
+                <div class="col">
+                  <p>Khu Vực B: được cộng 1 điểm</p>
+                </div>
+                <div class="col">Khu vực C: được cộng 0.5 điểm</div>
+              </div>
+            </div>
+            <div class="col border border-primary">
+              <p>Đối Tượng</p>
+              <div class="row">
+                <div class="col">
+                  <p>Đối tương 1: được cộng 2.5 điểm</p>
+                </div>
+                <div class="col">
+                  <p>Đối tượng 2: được cộng 1.5 điểm</p>
+                </div>
+                <div class="col">
+                  <p>đối tượng 3: được cộng 1 điểm</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p>Nhập số điểm 3 môn</p>
+      <div class="row">
+        <div class="col-4">
+          <div class="form-group">
+            <p>Nhập điểm môn Toán</p>
+            <input class="form-control w-25" id="diemToan" />
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="form-group">
+            <p>Nhập điểm môn Lý</p>
+            <input class="form-control w-25" id="diemLy" />
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="form-group">
+            <p>Nhập điểm môn Hóa</p>
+            <input class="form-control w-25" id="diemHoa" />
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <div class="form-group">
+            <p>Vui lòng chọn khu vực</p>
+            <!-- <input class="form-control w-25" id="khuVuc" /> -->
+            <select id="khuVuc">
+              <option value="">Chọn Khu Vực</option>
+              <option value="2">Khu Vưc A</option>
+              <option value="1">Khu Vực B</option>
+              <option value="0.5">Khu Vực C</option>
+              <option value="0">X</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="form-group">
+            <p>Vui lòng chọn đối tượng</p>
+            <!-- <input class="form-control w-25" id="doiTuong" /> -->
+            <select id="doiTuong">
+              <option value="">Chọn Đối Tượng</option>
+              <option value="2.5">Đối Tương 1</option>
+              <option value="1.5">Đối tượng 2</option>
+              <option value="1">Đối tượng 3</option>
+              <option value="0">X</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <button class="btn btn-primary my-3" id="btnTinhDiem">Tính Điểm</button>
+      <div class="alert alert-primary" id="ketQuaBai1"></div>
+
+      <hr />
+      <div class="card">
+        <div class="card-header">
+          <h3>Bài tập 2: Tính Tiền Điện</h3>
+        </div>
+        <div class="card-body">
+          <p>
+            Tính dựa vào bảng:
+            <br />
+            50kw đầu: 500d/kw
+            <br />
+            50kw kế: 650d/kw
+            <br />
+            100kw kế: 850d/kw
+            <br />
+            150kw kế: 1100d/kw
+            <br />
+            Còn lại: 1300d/kw
+          </p>
+          <div class="form-group">
+            <p>Nhập tên chủ căn hộ</p>
+            <input class="form-control w-25" id="nguoiSuDung" />
+          </div>
+          <div class="fom-group">
+            <p>Nhập số kw sử dụng điện</p>
+            <input class="form-control w-25" id="soKW" />
+          </div>
+          <button class="btn btn-primary my-3" id="btnTinhTien">
+            Tính Tiền
+          </button>
+        </div>
+        <div class="card-footer">
+          <div class="alert alert-primary" id="ketQuaBai2"></div>
+        </div>
+      </div>
+
+      <hr />
+      <div class="card">
+        <div class="card-header">
+          <h3>Bài Tập 3 : tính tiền thuê thu nhận cả năm</h3>
+        </div>
+        <div class="card-body">
+          <div class="form-group">
+            <p>Nhập họ và tên</p>
+            <input class="form-control w-25" id="hoVaTen" />
+          </div>
+          <div class="form-group">
+            <p>Nhập tổng thu nhập của năm</p>
+            <input class="form-control w-25" id="tongThuNhapCaNam" />
+          </div>
+          <div class="form-group">
+            <p>Nhập số người phụ thuộc</p>
+            <input class="form-control w-25" id="soNguoiPhuThuoc" />
+          </div>
+          <button class="btn btn-primary my-3" id="btnTinhThuNhap">
+            In kết quả
+          </button>
+        </div>
+        <div class="card-footer">
+          <div class="alert alert-primary" id="ketQuaBai3"></div>
+        </div>
+      </div>
+
+      <hr />
+      <div class="card">
+        <div class="card-header">
+          <h3>Bài 4 : Tính Tiền cáp</h3>
+        </div>
+        <div class="card-body">
+          <div class="form-group">
+            <p>Bạn là gì ?</p>
+            <select id="luaChon" onchange="anHien()">
+              <option value="">Mời chọn</option>
+              <option id="khachHang" value="KhachHang">Khách Hàng</option>
+              <option id="doanhNghiep" value="DoanhNghiep">Doanh Nghiệp</option>
+            </select>
+          </div>
+          <div class="form-group mt-2">
+            <p>Nhập mã khách hàng</p>
+            <input class="form-control w-25" id="maKH" />
+          </div>
+          <div class="form-group" id="ketNoi">
+            <p>Nhập số kết nối</p>
+            <input class="form-control w-25" id="soKetNoi" />
+          </div>
+          <div class="form-group">
+            <p>Nhập kênh cao cấp</p>
+            <input class="form-control w-25" id="kenhCaoCap" />
+          </div>
+          <button class="btn btn-primary my-3" id="btnTienCap">
+            Tính Tiền Cáp
+          </button>
+        </div>
+        <div class="card-footer">
+          <div class="alert alert-danger" id="ketQuaBai4"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./js/index.js"></script>
+  </body>
+</html>
